@@ -12,34 +12,118 @@
     <!-- <script src="https://code.jquery.com/jquery-1.12.4.js"></script> -->
   </head>
   
-  <body>
+  <body style="font-family:Trebuchet MS">
 	
-	<div class="container-md p-3 my-3 border bg-dark text-white" id="survey">
-    <h1>Survey</h1>
+	<div class="container-md p-3 my-3 border bg-danger text-white" id="survey">
+    <h1 class = "text-center">Toronto Pearson Airport Website Survey</h1>
+    
+	<center>
+		<img src="https://upload.wikimedia.org/wikipedia/en/thumb/3/3c/Toronto_Pearson_Airport_Logo.svg/1200px-Toronto_Pearson_Airport_Logo.svg.png" style="width:50%;"><br>
+		<br>
+		<h4>
+			<center>
+				<b>Let us know how we can improve the Toronto Pearson Airport Website.</b>
+			</center>
+		</h4>
+		<br>
+		<a href="https://www.torontopearson.com/eto" target="_blank"><h4 style="text-align:center">Link to the Toronto Pearson Airport Website</h4></a>
+	</center>
+	<br>
+
+    <h2>
+     <center>
+       <b>Questions</b>
+     </center>
+    </h2> <br>
+
     <form>
-      <h2> What fruits(s) do you like? </h2>
-      I like:<br>
-      <input type="text" name="fruit" placeholder="fruit name..." required />
-      <br>
-      <br>
-      <h2> What color(s) do you like? </h2>
-	    I like:<br>
-		  <input type="checkbox" name="color" value="Red"> Red<br>
-		  <input type="checkbox" name="color" value="Green"> Green<br>
-      <input type="checkbox" name="color" value="Blue"> Blue<br>
-      <br>
-      <h2>What is your favorite animal?</h2>
-      I like:<br>
-      <select name="animal">
-			  <option value="Cat" selected="selected">Cat</option>
-			  <option value="Dog">Dog</option>
-			  <option value="Turtle">Turtle</option>
-      </select>
-      <br>
-      <br>
-      <button type="submit" class="btn btn-warning" id="bb">Submit</button>
-      <p id="thanks"></p>
+
+    	<div class="container bg-success" style="padding-top:60px;padding-bottom:60px">
+			<div class = "question">
+				<h4>1. How often do you rely on our website for your trips?</h4>
+				&emsp;&emsp;&ensp;<input type="range" name="often" min="1" max="3">
+				<p>Rarely [1] &emsp; Sometimes [2] &emsp; Always [3]</p>
+			</div>
+		</div>
+
+		<div class="container bg-warning" style="padding-top:60px;padding-bottom:60px">
+	      	<h4>2. What country are you from? </h4>
+	      	<input type="text" name="country" placeholder="e.g. Canada" required/>
+      	</div>
+
+      	<div class="container bg-info" style="padding-top:60px;padding-bottom:60px">
+			<div class="question">
+				<h4>3. Where did you travel to in the last 3 years? (Check all that apply)</h4>
+				<div class="answers">
+					<input type="checkbox" name = "travel" value = "North America">
+					<label for="vehicle1">North America</label><br>
+					<input type="checkbox" name = "travel" value = "South America">
+					<label for="vehicle2">South America</label><br>
+					<input type="checkbox" name = "travel" value = "Asia">
+					<label for="vehicle3">Asia</label><br>
+					<input type="checkbox" name = "travel" value = "Europe">
+					<label for="vehicle5">Europe</label><br>
+					<input type="checkbox" name = "travel" value = "Other">
+					<label for="vehicle6">Other</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="container bg-success" style="padding-top:60px;padding-bottom:60px">
+			<div class="question">
+				<h4>4. What is the best color for the Toronto Pearson Airport Website?</h4>
+				<div class="answers">				
+					<select name = "colour">
+					  <option value="Blue">Blue</option>
+					  <option value="Red">Red</option>
+					  <option value="Green">Green</option>
+					  <option value="Orange">Orange</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<div class="container bg-warning" style="padding-top:60px;padding-bottom:60px">
+			<div class="question">
+				<h4>5. What should be improved in the future? (Check all that apply)</h4>
+				<div class="answers">
+					<input type="checkbox" name = "improvement" value = "User Friendliness">
+					<label for="improvement1">User Friendliness</label><br>
+					<input type="checkbox" name = "improvement" value = "Interface Design">
+					<label for="improvement2">Interface Design</label><br>
+					<input type="checkbox" name = "improvement" value = "Organization of Information">
+					<label for="improvement3">Organization of Information</label><br>
+					<input type="checkbox" name = "improvement" value = "Site Reliablity">
+					<label for="improvement4">Site Reliablity</label><br>
+					<input type="checkbox" name = "improvement" value = "Payment Process">
+					<label for="improvement5">Payment Process</label>
+				</div>
+			</div>
+		</div>
+
+		<div class="container bg-info" style="padding-top:60px;padding-bottom:60px">
+			<div class="question">
+				<h4>6. Would you recommend our website to your friends?</h4>
+				<div class="answers">				
+					<select name = "recommend">
+					  <option value="Yes">Yes</option>
+					  <option value="No">No</option>
+					</select>
+				</div>
+			</div>
+		</div>
+
+		<br>
+		<br>
+		<button type="submit" class="btn btn-primary" id="bb">Submit</button>
+		<p id="thanks"></p>
+
+		<footer>
+			<p>Website designed by Abhishek Saravanabavan (Student Number: 300062167)</p>
+		</footer>
+
     </form>
+    
     </div>
 	<script src="/assets/action.js"></script>
   </body>

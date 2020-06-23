@@ -5,23 +5,48 @@
 
 <body>
     <h1>Survey analysis</h1>
-    <h2>Colors</h2>
+
+    <h2>Question 1 - Scale of how often website is used for travel</h2>
     <ul>
     <% for (var i=0; i<results[0].length; i++){ %>
-        <li><%= results[0][i].color %> :  <%= results[0][i].count %></li>
+        <li><%= results[0][i].often %> :  <%= results[0][i].count %></li>
     <% } %>    
     </ul>
-    <h2>Fruits</h2>
+
+    <h2>Question 2 - User Country</h2>
     <ul>
     <% for (var i=0; i<results[1].length; i++){ %>
-        <li><%= results[1][i].fruit %> :  <%= results[1][i].count %></li>
+        <li><%= results[1][i].country %> :  <%= results[1][i].count %></li>
     <% } %>    
     </ul>
-    <h2>Animals</h2>
+
+    <h2>Question 3 - Travel Locations</h2>
     <ul>
     <% for (var i=0; i<results[2].length; i++){ %>
-        <li><%= results[2][i].animal %> :  <%= results[2][i].count %></li>
+        <li><%= results[2][i].travel %> :  <%= results[2][i].count %></li>
     <% } %>    
     </ul>
+
+    <h2>Question 4 - Colour of Website</h2>
+    <ul>
+    <% for (var i=0; i<results[3].length; i++){ %>
+        <li><%= results[3][i].colour %> :  <%= results[3][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>Question 5 - Possible improvements to website</h2>
+    <ul>
+    <% for (var i=0; i<results[4].length; i++){ %>
+        <li><%= results[4][i].improvement %> :  <%= results[4][i].count %></li>
+    <% } %>    
+    </ul>
+
+    <h2>Question 6 - Recommendations </h2>
+    <ul>
+    <% for (var i=0; i<results[5].length; i++){ %>
+        <li><%= results[5][i].recommend %> :  <%= results[5][i].count %></li>
+    <% } %>    
+    </ul>
+
 </body>
 </html>

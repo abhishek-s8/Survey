@@ -42,11 +42,14 @@ module.exports = function(app){
     // when a user goes to localhost:3000/analysis
     // serve a template (ejs file) which will include the data from the data files
     app.get('/analysis', function(req, res){
-        var color = readData("color");
-        var fruit = readData("fruit");
-        var animal = readData("animal");
-        res.render('showResults', {results: [color, fruit, animal]});
-        console.log([color, fruit, animal]);
+        var often = readData("often");
+        var country = readData("country");
+        var travel = readData("travel");
+        var colour = readData("colour");
+        var improvement = readData("improvement");
+        var recommend = readData("recommend");
+        res.render('showResults', {results: [often, country, travel, colour, improvement, recommend]});
+        console.log([often, country, travel, colour, improvement, recommend]);
     });
 
     // when a user goes to localhost:3000/niceSurvey
@@ -64,7 +67,12 @@ module.exports = function(app){
         for (var key in json){
             console.log(key + ": " + json[key]);
             // in the case of checkboxes, the user might check more than one
-            if ((key === "color") && (json[key].length === 2)){
+            if ((key === "travel") && (json[key].length === 2) || (json[key].length === 3) || (json[key].length === 4) || (json[key].length === 5)){
+                for (var item in json[key]){
+                    combineCounts(key, json[key][item]);
+                }
+            }
+            if ((key === "improvement") && (json[key].length === 2) || (json[key].length === 3) || (json[key].length === 4) || (json[key].length === 5)){
                 for (var item in json[key]){
                     combineCounts(key, json[key][item]);
                 }
